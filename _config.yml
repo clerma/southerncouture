@@ -1,88 +1,75 @@
----
 timezone: America/Chicago
-url:
-include: ['_pages', '_data','login.html','login', '_plugins']
-sitename:
+url: null
+include: ['_pages',' _data','login.html','login','_plugins','_team']
+sitename: Southern Couture Wedding
 relative_permalinks: false
-favicon:
+favicon: null
 lang: en
-author:
-# Your disqus shortname, entering this will enable commenting on posts
-disqus:
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+author: Southern Couture Wedding
+disqus: null
+google_analytics: null
 social:
-  name: Ohh Snap Photo booth
-  links:
-    -
-logo:
+  - name: Facebook
+    links: https://www.facebook.com/SouthernCoutureWedding
+  - name: Linkedin
+    link: http://www.linkedin.com/pub/hannah-trahan/38/310/351
+  - name: Instagram
+    link: https://www.instagram.com/southerncouturewed/
+logo: /assets/img/logo.png
 locale: en_us
-location:
-snipcart_key: "YjgzYjc3YWEtYjUzOC00MTA3LTlhMmYtMzgwZDUwMDQyNjk2NjM3OTM4NzI1MTg4MjA1MjY4"
-snipcart_currency: "usd"
-assets:
-  cdn:
-    baseurl: true
-    url:
-  digest: true
 collections:
   products:
     output: true
-
+  team:
+    output: true
 defaults:
--
-  scope:
-    path: ""
-  values:
-    layout: default
-    _options:
-      content: &content_defaults
-        uploads_dir: "uploads/:title"
-        format: p h1 h2 h3 h4 h5 h6 div
-        styles: /assets/css/theme.css
-        undo: true
-        redo: true
-        left: text-left
-        center: text-center
-        right: text-right
-        justify: justify-content-center
-        bold: true
-        italic: true
-        underline: true
-        strike: true
-        subscript: false
-        superscript: false
-        blockquote: true
-        table: true
-        copyformatting: true
-        removeformat: true
-        numberedlist: true
-        bulletedlist: true
-        outdent: false
-        indent: false
-        image: true
-        link: true
-        embed: true
--
-          scope:
-            path: ""
-            type: "products"
-          values:
-            layout: "product"
--
-  scope:
-    type: pages
-    path: _pages/index.html
-  values:
-    permalink:
--
-  scope:
-    type: posts
-  values:
-    layout: bloglayout
-
-# Permalinks
-permalink: "/:title/"
+  - scope:
+      path: ''
+    values:
+      layout: default
+      _options:
+        content:
+          uploads_dir: 'uploads/:title'
+          format: p h1 h2 h3 h4 h5 h6 div
+          styles: /assets/css/theme.css
+          undo: true
+          redo: true
+          left: text-left
+          center: text-center
+          right: text-right
+          justify: justify-content-center
+          bold: true
+          italic: true
+          underline: true
+          strike: true
+          subscript: false
+          superscript: false
+          blockquote: true
+          table: true
+          copyformatting: true
+          removeformat: true
+          numberedlist: true
+          bulletedlist: true
+          outdent: false
+          indent: false
+          image: true
+          link: true
+          embed: true
+  - scope:
+      path: ''
+      type: products
+    values:
+      layout: product
+  - scope:
+      type: pages
+      path: _pages/index.html
+    values:
+      permalink: null
+  - scope:
+      type: posts
+    values:
+      layout: bloglayout
+permalink: '/:title/'
 plugins:
   - jekyll-sitemap
   - jekyll-feed
@@ -90,12 +77,12 @@ plugins:
   - jekyll-archives
   - jekyll-assets
 exclude:
-    - .jekyll-cache/
-    - gemfiles/
-    - Gemfile
-    - Gemfile.lock
-    - vendor/bundle/
-    - vendor/cache/
-    - vendor/gems/
-    - vendor/ruby/
-    - _site
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - _site

@@ -1,0 +1,16 @@
+- name: Home
+  link: /
+- name: About
+  link: /about-southern-couture-weddings
+- name: Weddings
+  link: /wedding-planning-services
+- name: Events
+  link: /events
+- name: Teavel
+  link: /lafayette-travel-agent
+- name: Portfolio
+  link: /southern-couture-weddings
+- name: Love Notes
+  link: /wedding-planning-reviews
+- name: Contact
+  link: /book-a-wedding-planner

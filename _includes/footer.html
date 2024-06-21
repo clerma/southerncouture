@@ -4,40 +4,35 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="footer-column footer-about">
-						<h3 class="footer-title">About Beach Resort</h3>
-						<p class="footer-about-text">Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
-						<div class="footer-language"> <i class="lni ti-world"></i>
-							<select onchange="location = this.value;">
-								<option value="http://duruthemes.com/">English</option>
-								<option value="http://duruthemes.com/">German</option>
-							</select>
-						</div>
+						<h3 class="footer-title">About {{site.sitename}}</h3>
+						<p class="footer-about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 					</div>
 				</div>
 				<div class="col-md-3 offset-md-1">
 					<div class="footer-column footer-explore clearfix">
 						<h3 class="footer-title">Explore</h3>
 						<ul class="footer-explore-list list-unstyled">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="rooms.html">Rooms & Suites</a></li>
-							<li><a href="restaurant.html">Restaurant</a></li>
-							<li><a href="spa-wellness.html">Spa & Wellness</a></li>
-							<li><a href="about.html">About Hotel</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							{% for item in site.data.nav %}
+							<li><a href="{{item.link}}">{{item.name}}</a></li>
+							{% endfor %}
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="footer-column footer-contact">
 						<h3 class="footer-title">Contact</h3>
-						<p class="footer-contact-text">1616 Broadway NY, New York 10001
-							<br>United States of America
+						<p class="footer-contact-text">{{site.data.company_info.address}},{{site.data.company_info.address2}},{{site.data.company_info.city-state-zip}}
 						</p>
 						<div class="footer-contact-info">
-							<p class="footer-contact-phone"><span class="flaticon-call"></span> 855 100 4444</p>
-							<p class="footer-contact-mail">info@beachhotel.com</p>
+							<p class="footer-contact-phone"><span class="flaticon-call"></span> {{site.data.company_info.phone}}</p>
+							<p class="footer-contact-mail">{{site.data.company_info.email}}</p>
 						</div>
-						<div class="footer-about-social-list"> <a href="#"><i class="ti-instagram"></i></a> <a href="#"><i class="ti-twitter"></i></a> <a href="#"><i class="ti-youtube"></i></a> <a href="#"><i class="ti-facebook"></i></a> <a href="#"><i class="ti-pinterest"></i></a> </div>
+						<div class="footer-about-social-list">
+							{% for item in site.social %}
+							<a href="{{item.link}}" title="{{site.sitename}} {{item.name}} Social Media Link"><i class="ti-{{item.name | downcase }}"></i></a>
+							{% endfor %}
+
+						</div>
 					</div>
 				</div>
 			</div>
@@ -48,7 +43,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="footer-bottom-inner">
-						<p class="footer-bottom-copy-right">© Copyright 2024 by <a href="#">DuruThemes.com</a></p>
+						<p class="footer-bottom-copy-right">© Copyright {{site.sitename}} {{ site.time | date: "%Y" }} </p>
 					</div>
 				</div>
 			</div>
